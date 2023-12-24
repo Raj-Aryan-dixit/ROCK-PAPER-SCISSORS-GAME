@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="heading">ROCK PAPER SCISSORS GAME</h1>
+    <div class="layout">
+    <button class="ROCK" onclick="
+    game();
+    let result;
+    if(compchoice==='ROCK'){
+       result=`It's a Draw`;
+    score.Tie++;}
+    else if(compchoice==='SCISSORS'){
+       result=`User Wins`;
+       score.Win++;
+    }
+    else if(compchoice==='PAPER'){
+        result=`Computer Wins`;
+        score.Lost++;
+    }
+    alert(`you chose ROCK,Computer chose ${compchoice} so... ${result}
+    won:${score.Win}
+    Lost:${score.Lost}
+    Draw:${score.Tie}`);
+    "></button>
+    <button class="PAPER"
+    onclick="
+    game();
+    
+    if(compchoice==='ROCK'){
+       result=`User Wins`;
+    score.Win++;}
+    else if(compchoice==='SCISSORS'){
+       result=`Computer Wins`;
+       score.Lost++;
+       
+    }
+    else if(compchoice==='PAPER'){
+        result=`It's a Draw`;
+        score.Tie++;
+    }
+    alert(`you chose PAPER,Computer chose ${compchoice} so... ${result} 
+    Won:${score.Win}
+    Lost:${score.Lost}
+    Draw:${score.Tie}`);
+    "></button>
+    <button class="SCISSORS"
+    onclick="game();
+    
+    if(compchoice==='ROCK'){
+       result=`Computer Wins`;
+    score.Lost++;}
+       
+    else if(compchoice==='SCISSORS'){
+       result=`It's a Draw`;
+       score.Tie++;
+    }
+    else if(compchoice==='PAPER'){
+        result=`User Wins`;
+        score.Win++;
+    }
+    alert(`you chose SCISSORS,Computer chose ${compchoice} so... ${result}
+    won:${score.Win}
+    Lost:${score.Lost}
+    Draw:${score.Tie}`);"></button></div>
+    <script>
+          let score={
+        Win:0,
+        Lost:0,
+        Tie:0
+    };
+    
+        let compchoice;
+        function game(){
+            let randomchoice=Math.random()*3;
+            if(randomchoice>0 && randomchoice<=1){
+            compchoice= 'ROCK';}
+            else if(randomchoice>1 && randomchoice<=2){
+            compchoice='PAPER';}
+            else{
+            compchoice='SCISSORS';
+            }
+        }
+    </script>
+</body>
+</html>

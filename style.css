@@ -1,0 +1,36 @@
+.ROCK{
+        height: 200px;
+            width: 200px;
+    border-radius: 30px;
+        background-color: #9880ff;
+        border: none;
+        background-image:url(rock.png);
+        background-size: cover;
+}
+.PAPER{
+            height: 200px;
+                width: 200px;
+    border-radius: 30px;
+        background-color: #9880ff;
+        border: none;
+        background-image: url(paper.png);
+        background-size: cover;
+}
+.SCISSORS{
+            height: 200px;
+                width: 200px;
+    border-radius: 30px;
+        background-color: #9880ff;
+        border: none;
+        background-image: url(scissors.png);
+        background-size: cover;
+}
+.layout{
+    display: flex;
+    justify-content: space-evenly;
+}
+.heading{
+    display: flex;
+    justify-content:center;
+    font-family: cursive;
+}
