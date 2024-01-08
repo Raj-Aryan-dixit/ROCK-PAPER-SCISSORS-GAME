@@ -67,7 +67,8 @@
     alert(`you chose SCISSORS,Computer chose ${compchoice} so... ${result}
     won:${score.Win}
     Lost:${score.Lost}
-    Draw:${score.Tie}`);"></button></div>
+    Draw:${score.Tie}
+    `);"></button></div>
     <script>
           let score={
         Win:0,
@@ -86,6 +87,7 @@
             compchoice='SCISSORS';
             }
         }
+        localStorage.setItem('score',JSON.stringify(score))
     </script>
 </body>
 </html>
